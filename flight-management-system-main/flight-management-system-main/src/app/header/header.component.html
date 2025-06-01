@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Flight Booking</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/flight-details">All Flights</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/airport-details">All Airports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/admin"
+                        *ngIf="userService.roleMatch(['Admin'])">Admin Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/user"
+                        *ngIf="userService.roleMatch(['User'])">User Dashboard</a>
+                </li>
+            </ul>
+            <button mat-button *ngIf="! isLoggedIn()" style="color:white" routerLink="/login">Login</button>
+            <button mat-raised-button color="basic" *ngIf="! isLoggedIn()" routerLink="/register">SIGN UP</button>
+            <button mat-button *ngIf="isLoggedIn()" [matMenuTriggerFor]="beforeMenu" style="color: white">
+                <mat-icon> person_pin</mat-icon> Hello, {{
+                userData.username }}
+            </button>
+            <mat-menu #beforeMenu="matMenu" xPosition="before">
+                <!-- <button mat-menu-item>
+                    <mat-icon>dashboard</mat-icon> Profile
+                </button> -->
+                <button mat-menu-item (click)="logout()">
+                    <mat-icon> cancel_presentation</mat-icon> Logout
+                </button>
+            </mat-menu>
+        </div>
+    </div>
+</nav>

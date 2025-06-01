@@ -1,0 +1,7 @@
+:host ::ng-deep .mat-ripple-element {
+  position: absolute;
+}
+
+table {
+  width: 100%;
+}

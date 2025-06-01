@@ -1,0 +1,61 @@
+2022-05-29 16:04:42,427 INFO  StartupInfoLogger:55 - [] Starting AirportDetailsApplication using Java 18 on DESKTOP-IKN7B9A with PID 12780 (C:\Users\Ravi Tiwari\Desktop\Capgemini\Case Study\airport-details\target\classes started by Ravi Tiwari in C:\Users\Ravi Tiwari\Desktop\Capgemini\Case Study\airport-details)
+2022-05-29 16:04:42,449 INFO  SpringApplication:640 - [] No active profile set, falling back to 1 default profile: "default"
+2022-05-29 16:04:42,682 INFO  DeferredLog:255 - [] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-29 16:04:42,683 INFO  DeferredLog:255 - [] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-29 16:04:45,531 INFO  RepositoryConfigurationDelegate:132 - [] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-05-29 16:04:45,838 INFO  RepositoryConfigurationDelegate:201 - [] Finished Spring Data repository scanning in 297 ms. Found 1 MongoDB repository interfaces.
+2022-05-29 16:04:46,226 INFO  GenericScope:283 - [] BeanFactory id=c831484f-3525-3f25-8c36-6e613f81e02f
+2022-05-29 16:04:47,216 INFO  TomcatWebServer:108 - [] Tomcat initialized with port(s): 9000 (http)
+2022-05-29 16:04:47,232 INFO  DirectJDKLog:173 - [] Starting service [Tomcat]
+2022-05-29 16:04:47,235 INFO  DirectJDKLog:173 - [] Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-05-29 16:04:47,459 INFO  DirectJDKLog:173 - [] Initializing Spring embedded WebApplicationContext
+2022-05-29 16:04:47,460 INFO  ServletWebServerApplicationContext:290 - [] Root WebApplicationContext: initialization completed in 4775 ms
+2022-05-29 16:04:47,718 INFO  SLF4JLogger:71 - [] Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-05-29 16:04:47,836 INFO  SLF4JLogger:71 - [] Opened connection [connectionId{localValue:1, serverValue:8}] to localhost:27017
+2022-05-29 16:04:47,836 INFO  SLF4JLogger:71 - [] Opened connection [connectionId{localValue:2, serverValue:7}] to localhost:27017
+2022-05-29 16:04:47,837 INFO  SLF4JLogger:71 - [] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=40948100}
+2022-05-29 16:04:47,928 WARN  CustomConversions:261 - [] Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-05-29 16:04:48,057 WARN  OptionalLiveReloadServer:61 - [] Unable to start LiveReload server
+2022-05-29 16:04:48,138 WARN  CustomConversions:261 - [] Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-05-29 16:04:50,479 INFO  DiscoveryClientOptionalArgsConfiguration:68 - [] Eureka HTTP Client uses RestTemplate.
+2022-05-29 16:04:50,824 WARN  LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger:82 - [] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-05-29 16:04:50,861 INFO  InstanceInfoFactory:67 - [] Setting initial instance status as: STARTING
+2022-05-29 16:04:50,988 INFO  DiscoveryClient:372 - [] Initializing Eureka in region us-east-1
+2022-05-29 16:04:50,995 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
+2022-05-29 16:04:51,033 INFO  DiscoveryClient:1007 - [] Disable delta property : false
+2022-05-29 16:04:51,034 INFO  DiscoveryClient:1008 - [] Single vip registry refresh property : null
+2022-05-29 16:04:51,034 INFO  DiscoveryClient:1009 - [] Force full registry fetch : false
+2022-05-29 16:04:51,035 INFO  DiscoveryClient:1010 - [] Application is null : false
+2022-05-29 16:04:51,036 INFO  DiscoveryClient:1011 - [] Registered Applications size is zero : true
+2022-05-29 16:04:51,037 INFO  DiscoveryClient:1013 - [] Application version is -1: true
+2022-05-29 16:04:51,037 INFO  DiscoveryClient:1097 - [] Getting all instance registry info from the eureka server
+2022-05-29 16:04:51,891 INFO  DiscoveryClient:1106 - [] The response status is 200
+2022-05-29 16:04:51,897 INFO  DiscoveryClient:1321 - [] Starting heartbeat executor: renew interval is: 30
+2022-05-29 16:04:51,904 INFO  InstanceInfoReplicator:60 - [] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-05-29 16:04:51,917 INFO  DiscoveryClient:492 - [] Discovery Client initialized at timestamp 1653820491915 with initial instances count: 4
+2022-05-29 16:04:51,920 INFO  EurekaServiceRegistry:41 - [] Registering application AIRPORT-DETAILS with eureka with status UP
+2022-05-29 16:04:51,921 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1653820491921, current=UP, previous=STARTING]
+2022-05-29 16:04:51,924 INFO  DiscoveryClient:873 - [] DiscoveryClient_AIRPORT-DETAILS/DESKTOP-IKN7B9A:airport-details:9000: registering service...
+2022-05-29 16:04:51,977 INFO  TomcatWebServer:220 - [] Tomcat started on port(s): 9000 (http) with context path ''
+2022-05-29 16:04:51,979 INFO  EurekaAutoServiceRegistration:144 - [] Updating port to 9000
+2022-05-29 16:04:52,043 INFO  DiscoveryClient:882 - [] DiscoveryClient_AIRPORT-DETAILS/DESKTOP-IKN7B9A:airport-details:9000 - registration status: 204
+2022-05-29 16:04:52,226 INFO  StartupInfoLogger:61 - [] Started AirportDetailsApplication in 11.286 seconds (JVM running for 13.204)
+2022-05-29 16:09:51,106 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
+2022-05-29 16:14:51,226 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
+2022-05-29 16:19:51,272 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
+2022-05-29 16:24:51,302 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
+2022-05-29 16:25:01,399 INFO  DirectJDKLog:173 - [] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-29 16:25:01,403 INFO  FrameworkServlet:525 - [] Initializing Servlet 'dispatcherServlet'
+2022-05-29 16:25:01,518 INFO  FrameworkServlet:547 - [] Completed initialization in 114 ms
+2022-05-29 16:25:02,135 INFO  SLF4JLogger:71 - [] Opened connection [connectionId{localValue:3, serverValue:10}] to localhost:27017
+2022-05-29 16:29:51,407 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
+2022-05-29 16:34:51,454 INFO  ConfigClusterResolver:43 - [] Resolving eureka endpoints via configuration
+2022-05-29 16:39:20,157 INFO  EurekaServiceRegistry:62 - [] Unregistering application AIRPORT-DETAILS with eureka with status DOWN
+2022-05-29 16:39:20,210 INFO  DiscoveryClient$3:1352 - [] Saw local status change event StatusChangeEvent [timestamp=1653822560210, current=DOWN, previous=UP]
+2022-05-29 16:39:20,220 INFO  DiscoveryClient:873 - [] DiscoveryClient_AIRPORT-DETAILS/DESKTOP-IKN7B9A:airport-details:9000: registering service...
+2022-05-29 16:39:20,977 INFO  DiscoveryClient:882 - [] DiscoveryClient_AIRPORT-DETAILS/DESKTOP-IKN7B9A:airport-details:9000 - registration status: 204
+2022-05-29 16:39:21,733 INFO  DiscoveryClient:935 - [] Shutting down DiscoveryClient ...
+2022-05-29 16:39:24,976 WARN  TimedSupervisorTask:90 - [] task supervisor shutting down, can't accept the task
+2022-05-29 16:39:25,007 INFO  DiscoveryClient:971 - [] Unregistering ...
+2022-05-29 16:39:25,038 INFO  DiscoveryClient:973 - [] DiscoveryClient_AIRPORT-DETAILS/DESKTOP-IKN7B9A:airport-details:9000 - deregister  status: 200
+2022-05-29 16:39:25,141 INFO  DiscoveryClient:960 - [] Completed shut down of DiscoveryClient

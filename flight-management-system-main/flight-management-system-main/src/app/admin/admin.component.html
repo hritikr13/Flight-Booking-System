@@ -1,0 +1,105 @@
+<mat-tab-group mat-align-tabs="center" style="display: flex; align-items: center; justify-content: center;">
+    <mat-tab label="Accounts">
+        <div class="card" style="padding: 20px; width: 500px; margin-top: 20px">
+            <form (ngSubmit)="addUser()" [formGroup]="addUserForm">
+                <input type="text" name="firstName" id="firstName" placeholder="Enter First Name"
+                    class="form-control mb-3" formControlName="firstName">
+                <input type="text" name="lastName" id="lastName" placeholder="Enter Last Name" class="form-control mb-3"
+                    formControlName="lastName">
+                <input type="text" name="username" id="username" placeholder="Enter username" class="form-control mb-3"
+                    formControlName="username">
+                <input type="number" name="mobile" id="mobile" placeholder="Enter Mobile Number"
+                    class="form-control mb-3" formControlName="mobile">
+                <input type="email" name="emailId" placeholder="Enter Email Address" class="form-control mb-3"
+                    formControlName="emailId">
+                <input type="password" name="userPassword" id="userPassword" placeholder="Enter password"
+                    class="form-control mb-3" formControlName="password">
+
+                <input type="submit" value="Add User" class="btn btn-outline-primary form-control rounded-0">
+            </form>
+        </div>
+    </mat-tab>
+    <mat-tab label="Flights">
+        <div class="card" style="padding: 20px; width: 500px; margin-top: 20px">
+            <form (ngSubmit)="addFlight()" [formGroup]="addFlightDetailsForm">
+                <span style="margin-bottom: 20px">
+                    <h2>Add New Flight</h2>
+                </span>
+                <input type="text" name="id" id="id" placeholder="Enter Flight ID" class="form-control mb-3"
+                    formControlName="id">
+                <input type="text" name="flightNumber" id="flightNumber" placeholder="Enter Flight Number"
+                    class="form-control mb-3" formControlName="flightNumber">
+                <input type="text" name="source" id="source" placeholder="Enter Flight Source" class="form-control mb-3"
+                    formControlName="source">
+                <input type="text" name="destination" id="destination" placeholder="Enter Flight Destination"
+                    class="form-control mb-3" formControlName="destination">
+                <input type="date" name="date" id="date" placeholder="Enter Flight Date" class="form-control mb-3"
+                    formControlName="date">
+                <input type="number" name="fare" id="fare" placeholder="Enter Flight Fare" class="form-control mb-3"
+                    formControlName="fare">
+
+                <input type="submit" value="Add Flight" class="btn btn-outline-primary form-control rounded-0">
+            </form>
+        </div>
+        <div class="card" style="padding: 20px; width: 500px; margin-top: 20px">
+            <form (ngSubmit)="deleteFlight()" [formGroup]="deleteFlightDetailsForm">
+                <span style="margin-bottom: 20px">
+                    <h2>Delete Flight</h2>
+                </span>
+                <input type="text" name="flightNumber" id="flightNumber" placeholder="Enter Flight Number"
+                    class="form-control mb-3" formControlName="flightNumber">
+
+                <input type="submit" value="Delete Flight" class="btn btn-outline-primary form-control rounded-0">
+            </form>
+        </div>
+    </mat-tab>
+    <mat-tab label="Airports">
+        <div class="card" style="padding: 20px; width: 500px; margin-top: 20px">
+            <form (ngSubmit)="addAirport()" [formGroup]="addAirportDetailsForm">
+                <span style="margin-bottom: 20px">
+                    <h2>Add Airport</h2>
+                </span>
+                <input type="text" name="airportCode" id="airportCode" placeholder="Enter Airport Code"
+                    class="form-control mb-3" formControlName="airportCode">
+                <input type="text" name="airportLocation" id="airportLocation" placeholder="Enter Airport Location"
+                    class="form-control mb-3" formControlName="airportLocation">
+                <input type="text" name="airportName" id="airportName" placeholder="Enter Airport Name"
+                    class="form-control mb-3" formControlName="airportName">
+
+                <input type="submit" value="Add Airport" class="btn btn-outline-primary form-control rounded-0">
+            </form>
+        </div>
+        <mat-card style="width: 800px; margin-top: 20px">
+            <mat-card-header style="text-align: center; display:flex; align-items: center; justify-content: center;">
+                <mat-card-title>Airport Details</mat-card-title>
+                <mat-card-subtitle>All Airports Data available here.</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <table mat-table [dataSource]="dataSource">
+                    <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef> ID </th>
+                        <td mat-cell *matCellDef="let element"> {{element.airportCode}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="flightNumber">
+                        <th mat-header-cell *matHeaderCellDef> Airport Name </th>
+                        <td mat-cell *matCellDef="let element"> {{element.airportName}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="source">
+                        <th mat-header-cell *matHeaderCellDef> Airport City </th>
+                        <td mat-cell *matCellDef="let element"> {{element.airportLocation}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="action">
+                        <th mat-header-cell *matHeaderCellDef> </th>
+                        <td mat-cell *matCellDef="let element"> <button mat-flat-button color="primary"
+                                (click)="deleteAirport(element)">Delete</button>
+                        <td mat-cell *matCellDef="let element"> <button mat-flat-button color="primary">Update</button>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </mat-card-content>
+        </mat-card>
+    </mat-tab>
+</mat-tab-group>
