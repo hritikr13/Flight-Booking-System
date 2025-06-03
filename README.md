@@ -70,7 +70,7 @@ Flight-Booking-System/
 
 👨‍💼 Author
 
-Hritik RanjanGitHub: @hritikr13
+Hritik Ray (GitHub: @hritikr13)
 
 📄 License
 
